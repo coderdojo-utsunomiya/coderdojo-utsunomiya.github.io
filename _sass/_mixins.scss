@@ -1,0 +1,25 @@
+@mixin hook-base-heading(){}
+@mixin hook-base-h1(){
+	@extend .uk-box-shadow-large;
+	transform: rotate(-3deg);
+	display: inline-block;
+	padding-left: $global-gutter * 2;
+	padding-right: $global-gutter;
+	margin-top: $global-gutter;
+}
+@mixin hook-base-h2(){}
+@mixin hook-base-h3(){}
+@mixin hook-base-h4(){}
+@mixin hook-base-h5(){}
+@mixin hook-base-h6(){}
+@mixin hook-inverse-base-heading(){}
+@mixin hook-inverse-base-h1(){}
+@mixin hook-inverse-base-h2(){}
+@mixin hook-inverse-base-h3(){}
+@mixin hook-inverse-base-h4(){}
+@mixin hook-inverse-base-h5(){}
+@mixin hook-inverse-base-h6(){}
+
+.cd-logo {
+	font-family: "League-Gothic", sans-serif !important;
+}

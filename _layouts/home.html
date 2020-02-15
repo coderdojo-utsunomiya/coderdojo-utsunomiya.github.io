@@ -1,21 +1,27 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{%- include head.html -%}
 
+<body>
 
-<div class="uk-section uk-light uk-height-viewport uk-background-cover" style="background-image: url(assets/img/hoge.jpg)">
-  <div class="uk-container">
-    <h1>{{ page.cover.head }}</h1>
+<div>
+  <div class="uk-inline uk-width-1-1 uk-background-cover" style="background-image: url(assets/img/{{ page.cover.image }})" uk-height-viewport="offset-top: true; offset-bottom: true">
+    <h1 class="uk-background-default">
+        <span class="uk-heading-medium cd-logo">CoderDojo Utsunomiya</span><br>
+        <span class="uk-h4">コーダー道場 宇都宮</span>
+    </h1>
+    <div class="uk-position-bottom-right uk-overlay-primary uk-text-meta">
+      CoderDojo Champions' Handbook より
+    </div>
+  </div>
+
+  <div class="uk-section uk-background-primary uk-light">
+    <div class="uk-container">
+      <!-- <h2 class="uk-text-center">{{ page.abstract.head }}</h2> -->
+      {{ page.abstract.desc | markdownify }}
+    </div>
   </div>
 </div>
-
-<div class="uk-section uk-light uk-background-primary">
-  <div class="uk-container">
-    <h2>{{ page.abstract.head }}</h2>
-    {{ page.abstract.desc | markdownify }}
-  </div>
-</div>
-
 
 <div class="uk-section">
   <div class="uk-container">
@@ -82,3 +88,8 @@ layout: default
 
   </div>
 </div>
+
+{%- include footer.html -%}
+</body>
+
+</html>
