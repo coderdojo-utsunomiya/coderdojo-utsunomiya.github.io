@@ -1,25 +1,34 @@
-@mixin hook-base-heading(){}
 @mixin hook-base-h1(){
 	@extend .uk-box-shadow-large;
+	background-color: $global-background;
 	transform: rotate(-3deg);
 	display: inline-block;
 	padding-left: $global-gutter * 2;
 	padding-right: $global-gutter;
 	margin-top: $global-gutter;
 }
-@mixin hook-base-h2(){}
-@mixin hook-base-h3(){}
-@mixin hook-base-h4(){}
-@mixin hook-base-h5(){}
-@mixin hook-base-h6(){}
-@mixin hook-inverse-base-heading(){}
-@mixin hook-inverse-base-h1(){}
-@mixin hook-inverse-base-h2(){}
-@mixin hook-inverse-base-h3(){}
-@mixin hook-inverse-base-h4(){}
-@mixin hook-inverse-base-h5(){}
-@mixin hook-inverse-base-h6(){}
+
+@mixin hook-base-h2(){
+	@extend .uk-h1;
+	@extend .uk-text-bold;
+	@extend .uk-light;
+	background-color: $cd-orange;
+}
+
+@mixin hook-card(){
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
+}
+
+@mixin hook-card-header(){
+	background-color: $cd-teal;
+}
 
 .cd-logo {
 	font-family: "League-Gothic", sans-serif !important;
+}
+
+.cd-big-date {
+	@extend .uk-heading-small;
+	@extend .uk-text-bold;
+	color: $global-inverse-color !important;
 }
