@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-{%- include head.html -%}
-
-<body>
-
+---
+layout: default
+---
 <div>
   <div class="uk-section uk-background-cover" style="position: relative; background-image: url({{ page.cover.image | relative_url }})" uk-height-viewport="offset-top: true; offset-bottom: true">
     <div class="uk-container">
@@ -147,7 +144,4 @@
   </div>
 </div>
 
-{%- include footer.html -%}
-</body>
 
-</html>
