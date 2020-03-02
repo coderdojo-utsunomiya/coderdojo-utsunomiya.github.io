@@ -1,27 +1,35 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
-  </header>
-
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
+{% if page.image %}
+<div class="uk-section uk-background-cover" style="background-image: url({{ page.image | relative_url }});">
+{% else %}
+<div class="uk-section uk-background-primary">
+{% endif %}
+  <div class="uk-container uk-padding-remove-top">
+    <a href="{{ "/" | relative_url }}" class="uk-icon-button uk-background-primary uk-light" uk-icon="icon: home"></a>
   </div>
 
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
+  <div class="uk-container">
+    <h1>{{ page.title | escape }}</h1>
+  </div>
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
+  <div class="uk-padding-large">
+  </div>
+</div>
+
+<div class="uk-container uk-padding-remove-vertical uk-margin-remove-vertical">
+  <p class="uk-padding-remove-vertical uk-margin-remove-vertical uk-text-meta">
+    <time datetime="{{ page.date | date: "%F"}}">
+      {{ page.date | date: "%Y" }} 年
+      {{ page.date | date: "%-m" }} 月
+      {{ page.date | date: "%-d" }} 日 
+    </time>
+  </p>
+</div>
+
+<div class="uk-section">
+  <div class="uk-container">
+    {{ content }}
+  </div>
+</div>
