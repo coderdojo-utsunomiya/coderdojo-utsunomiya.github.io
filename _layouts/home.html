@@ -2,16 +2,16 @@
 layout: default
 ---
 <div>
-  <div class="uk-section uk-background-cover" style="position: relative; background-image: url({{ page.cover.image | relative_url }})" uk-height-viewport="offset-top: true; offset-bottom: true">
+  <div class="uk-section uk-background-cover" style="position: relative; background-image: url({{ page.image | relative_url }})" uk-height-viewport="offset-top: true; offset-bottom: true">
     <div class="uk-container">
       <h1 class="uk-background-default">
           <span class="uk-heading-medium cd-logo">CoderDojo Utsunomiya</span><br>
           <span class="uk-h4">コーダー道場 宇都宮</span>
       </h1>
     </div>
-    {% if page.cover.image_comment %}
+    {% if page.image_comment %}
     <div class="uk-position-bottom-right uk-overlay-primary uk-text-meta">
-      {{ page.cover.image_comment }}
+      {{ page.image_comment }}
     </div>
     {% endif %}
   </div>
@@ -28,9 +28,9 @@ layout: default
     <h2>開催予定</h2>
     <p>月1回程度のペースで定期的に開催する予定です。</p>
     <div uk-grid>
-      {% assign notice_posts = site.posts | where: "categories", "dojo-notice" %}
-      {% for post in notice_posts reversed %}
-      <div class="uk-width-1-1">
+      {% assign notice_posts = site.posts | where: "categories", "dojo-notice" | sort: "dojo-start" %}
+      {% for post in notice_posts %}
+      <div class="uk-width-1-2@m">
         <div class="uk-card">
           <div class="uk-card-header uk-text-center uk-text-emphasis">
             <h3 class="uk-card-title uk-heading-medium uk-text-bold uk-margin-remove-bottom">
@@ -64,13 +64,13 @@ layout: default
           </div>
 
           <div class="uk-card-body">
-            <p>{{ post.dojo_comment }}</p>
+            <p>{{ post.excerpt}}</p>
             <p><a href="{{ post.url | relative_url }}">詳細...</a></p>
 
             {% if post.dojo_fixed %}
-            <a href="#"><button class="uk-button uk-button-primary">参加</button></a>
+            <a href="{{ post.dojo_url }}"><button class="uk-button uk-button-primary">参加申し込みはこちら</button></a>
             {% else %}
-            <button class="uk-button uk-button-primary" disabled>参加</button>
+            <button class="uk-button uk-button-primary" disabled>参加申し込みはこちら</button>
             {% endif %}
 
           </div>
@@ -92,9 +92,9 @@ layout: default
         <div class="uk-card uk-card-hover">
           <div class="uk-card-header uk-background-primary uk-light">
             <div class="uk-grid-small uk-flex-middle" uk-grid>
-              {% if post.img %}
+              {% if post.image %}
               <div class="uk-width-auto">
-                <img class="uk-border-circle" width="40" height="40" src="{{ post.img | relative_url }}">
+                <img width="64" height="64" src="{{ post.image | relative_url }}">
               </div>
               {% endif %}
               <div class="uk-width-expand">
@@ -111,7 +111,9 @@ layout: default
           </div>
           {% if post.excerpt %}
           <div class="uk-card-body">
-            {{ post.excerpt }}
+            <div class="cd-excerpt">
+              {{ post.excerpt }}
+            </div>
             <p class="uk-margin-remove uk-text-right uk-link-text">さらに詳しく...</p>
           </div>
           {% endif %}
@@ -144,4 +146,26 @@ layout: default
   </div>
 </div>
 
+<div class="uk-section">
+  <div class="uk-container">
+    <h2>スタッフ</h2>
+    <div class="uk-margin-top" uk-grid>
+      {% for mentor in page.mentors %}
+      <div class="uk-width-1-2@m">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+          {% if mentor.image %}
+          <div class="uk-width-auto">
+            <img class="uk-border-circle" width="96" height="96" src="{{ mentor.image | relative_url }}">
+          </div>
+          {% endif %}
+          <div class="uk-width-expand">
+            <h3 class="uk-card-title">{{ mentor.name }}</h3>
+            <p>{{ mentor.desc }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
 
