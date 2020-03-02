@@ -13,16 +13,21 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
+title: CoderDojo Utsunomiya
+email: 
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  CoderDojo (コーダー道場) は主に小学生から高校生を対象としたプログラミングクラブです。
+  2011年にアイルランドで始まり、今では世界 106 ヵ国に 2,068 の道場があり、日本にも 194 の道場があります。 (2019年11月現在)
+  一般的なプログラミング教室と違い、 CoderDojo にカリキュラムは存在しません。
+  自分たちでやりたいことを見つけて、自由に楽しみながらそれに取り組みます。
+  私たちはあくまでサポート役。
+  主役は子どもたち自身です。
+  さあ、あなたも CoderDojo の門をたたいてみませんか？
+  参加費は無料です！
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+# twitter_username: jekyllrb
+# github_username:  jekyll
 
 # Build settings
 markdown: kramdown
