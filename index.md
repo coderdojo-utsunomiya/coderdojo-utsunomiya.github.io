@@ -54,7 +54,7 @@ features:
     desc: |
       [CoderDojo Japan](https://coderdojo.jp/) の紹介スライドが参考になります。
 
-      <iframe class="uk-align-center" allowfullscreen='true' frameborder='0' height='350' marginheight='0' marginwidth='0' mozallowfullscreen='true' scrolling='no' src='https://docs.google.com/presentation/d/e/2PACX-1vTukDtBzvD62d9rNLBY1kXp8arXJBnB-Lq6YWSW5oZXoeokGLscob1HNYzmD7mIIxhkoQyCJVoFAFvh/embed?start=false&amp;loop=false' webkitallowfullscreen='true' width='595'></iframe>
+      <iframe class="uk-align-center" allowfullscreen='true' frameborder='0' height='350' marginheight='0' marginwidth='0' mozallowfullscreen='true' scrolling='no' src='https://docs.google.com/presentation/d/e/2PACX-1vTukDtBzvD62d9rNLBY1kXp8arXJBnB-Lq6YWSW5oZXoeokGLscob1HNYzmD7mIIxhkoQyCJVoFAFvh/embed?start=false&amp;loop=false' webkitallowfullscreen='true' width='100%'></iframe>
 
 mentors:
   - name: 石田 祐介
