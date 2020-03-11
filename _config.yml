@@ -32,8 +32,8 @@ google_analytics: UA-153578785-1
 
 # Build settings
 markdown: kramdown
-plugins: []
-  #  - jekyll-feed
+plugins:
+  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
