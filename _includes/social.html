@@ -4,6 +4,9 @@
 {%- if site.facebook_username -%}
 <a href="https://www.facebook.com/{{ site.facebook_username| cgi_escape | escape }}" class="uk-icon-button uk-margin-small-right" uk-icon="facebook"></a>
 {%- endif -%}
+{%- if site.github_username and site.github_repository -%}
+<a href="https://github.com/{{ site.github_username | cgi_escape | escape }}/{{ site.github_repository | cgi_escape | escape }}" class="uk-icon-button uk-margin-small-right" uk-icon="github"></a>
+{%- endif -%}
 {%- if site.rss -%}
 <a href="{{ 'feed.xml' | relative_url }}" class="uk-icon-button uk-margin-small-right" uk-icon="rss"></a>
 {%- endif -%}

@@ -29,6 +29,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: CoderDojoUTM
 facebook_username: coderdojo.utsunomiya
 github_username:  coderdojo-utsunomiya
+github_repository: coderdojo-utsunomiya.github.io
 rss: true
 google_analytics: UA-153578785-1
 
