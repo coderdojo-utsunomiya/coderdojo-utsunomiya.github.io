@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: CoderDojo Utsunomiya
-email: 
+email: utsunomiya.jp@coderdojo.com
 description: >- # this means to ignore newlines until "baseurl:"
   CoderDojo (コーダー道場) は主に小学生から高校生を対象としたプログラミングクラブです。
   2011年にアイルランドで始まり、今では世界 106 ヵ国に 2,068 の道場があり、日本にも 194 の道場があります。 (2019年11月現在)
