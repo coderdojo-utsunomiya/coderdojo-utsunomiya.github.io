@@ -33,7 +33,7 @@ layout: default
     <p>月1回程度のペースで定期的に開催する予定です。</p>
     <div uk-grid>
       {% assign notice_posts = site.posts | where: "categories", "dojo-notice" | sort: "dojo-start" %}
-      {% for post in notice_posts %}
+      {% for post in notice_posts %}{% if post.dojo_start > site.time %}
       <div class="uk-width-1-2@m">
         <div class="uk-card">
           <div class="uk-card-header uk-text-center uk-text-emphasis">
@@ -62,7 +62,8 @@ layout: default
               計画中
             {% endif %}
             </p>
-            <p class="margin-remove-top uk-margin-remove"><span uk-icon="location"></span>
+            <p class="margin-remove-top uk-margin-remove">
+              <a href="{{ post.dojo_place_link }}" target="_blank" class="uk-icon-button uk-background-secondary uk-light" uk-icon="location"></a>
               {{ post.dojo_place }}
             </p>
           </div>
@@ -71,16 +72,16 @@ layout: default
             <p>{{ post.excerpt}}</p>
             <p><a href="{{ post.url | relative_url }}">詳細...</a></p>
 
-            {% if post.dojo_fixed %}
+            {% if post.dojo_fixed and post.dojo_url %}
             <a href="{{ post.dojo_url }}"><button class="uk-button uk-button-primary">参加申し込みはこちら</button></a>
-            {% else %}
+            {% elsif post.dojo_url %}
             <button class="uk-button uk-button-primary" disabled>参加申し込みはこちら</button>
             {% endif %}
 
           </div>
         </div>
       </div>
-      {% endfor %}
+      {% endif %}{% endfor %}
     </div>
   </div>
 </div>
@@ -107,7 +108,7 @@ layout: default
                   <time datetime="{{ post.date | date: "%F"}}">
                     {{ post.date | date: "%Y" }} 年
                     {{ post.date | date: "%-m" }} 月
-                    {{ post.date | date: "%-d" }} 日 
+                    {{ post.date | date: "%-d" }} 日
                   </time>
                 </p>
               </div>
