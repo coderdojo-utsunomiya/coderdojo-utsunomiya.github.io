@@ -3,7 +3,8 @@
 ## How to install
 
 ```
-gem install bundler jekyll
+gem install bundler
+git submodule update --init
 bundle install
 ```
 
@@ -14,3 +15,11 @@ If you failed installing ``nokogiri`` during ``bundle install``, let you try aga
 apt-get install zlib1g-dev
 ```
 
+(for Ubuntu 20.04 on WSL)
+
+```
+sudo apt install -y ruby ruby-dev zlib1g-dev
+sudo gem install bundler
+git submodule update --init
+bundle install
+```
