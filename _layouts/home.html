@@ -32,7 +32,7 @@ layout: default
     <h2>開催予定</h2>
     <p>月1回程度のペースで定期的に開催する予定です。</p>
     <div uk-grid>
-      {% assign notice_posts = site.posts | where: "categories", "dojo-notice" | sort: "dojo-start" %}
+      {% assign notice_posts = site.posts | where: "categories", "dojo-notice" | sort: "dojo_start" %}
       {% for post in notice_posts %}{% if post.dojo_start > site.time %}
       <div class="uk-width-1-2@m">
         <div class="uk-card">
