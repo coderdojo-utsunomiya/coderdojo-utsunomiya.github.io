@@ -1,12 +1,12 @@
 ---
 layout: post
 title:  第2回 CoderDojo Utsunomiya 開催レポート
-date:   2020-07-13 00:00:00 +0900
+date:   2020-07-13 00:00:01 +0900
 categories: blog
 image: assets/img/2020-07-11/photo1.jpg
 ---
 
-2020年7月13日に第2回 CoderDojo Utsunomiya を開催しました！
+2020年7月11日に第2回 CoderDojo Utsunomiya を開催しました！
 今回も前回同様、感染症対策として全員マスク着用と、互いに向き合わないよう壁向きでの作業をお願いしました。
 
 ニンジャの参加者は7名。
