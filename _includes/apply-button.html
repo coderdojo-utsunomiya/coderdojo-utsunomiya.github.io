@@ -1,0 +1,10 @@
+{% if include.post.dojo_fixed and include.post.dojo_url and include.post.dojo_apply_closed != true %}
+<a href="{{ include.post.dojo_url }}"><button class="uk-button uk-button-primary">参加申し込みはこちら</button></a>
+{% else %}
+  {% if include.post.dojo_apply_closed %}
+<p>参加申し込みは終了しました。</p>
+  {% else %}
+<p>参加申し込みは後日オープン予定です。</p>
+  {% endif %}
+<button class="uk-button uk-button-primary" disabled>参加申し込みはこちら</button>
+{% endif %}
