@@ -54,3 +54,7 @@ table {
 	@extend .uk-table;
 	@extend .uk-table-striped;
 }
+
+.twitter-share-button,.fb-like {
+	vertical-align: top;
+}
