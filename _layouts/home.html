@@ -71,7 +71,7 @@ layout: default
           </div>
 
           <div class="uk-card-body">
-            <p>{{ post.excerpt}}</p>
+            <p>{{ post.excerpt | markdownify }}</p>
             <p><a href="{{ post.url | relative_url }}">詳細...</a></p>
 
             {% if post.dojo_fixed and post.dojo_url and post.dojo_apply_closed != true %}
@@ -125,7 +125,7 @@ layout: default
           {% if post.excerpt %}
           <div class="uk-card-body">
             <div class="cd-excerpt">
-              {{ post.excerpt }}
+              {{ post.excerpt | markdownify }}
             </div>
             <p class="uk-margin-remove uk-text-right uk-link-text">さらに詳しく...</p>
           </div>
